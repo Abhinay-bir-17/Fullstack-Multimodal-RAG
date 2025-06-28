@@ -1,0 +1,65 @@
+TO make raw_chunks work, you need to install Poppler on Windows.
+---------------------
+1. poppler :  Step 1: Download & Extract
+Go to: https://github.com/oschwartz10612/poppler-windows/releases
+
+Click on Release 24.08.0-0
+
+Download the file:
+
+🔽 Release-24.08.0-0.zip
+
+Extract it somewhere easy, like:
+
+C:\poppler-24.08.0-0
+
+✅ Step 2: Add Poppler to PATH
+Open Start Menu → search “Edit the system environment variables” → open it
+
+In the System Properties window, click “Environment Variables”
+
+Under System variables, find and select the variable named Path, then click Edit
+
+Click New and add this path (update based on your folder):
+
+makefile
+Copy
+Edit
+C:\poppler-24.08.0-0\Library\bin
+Click OK on all dialogs
+
+✅ Step 3: Restart Terminal / IDE
+Close and reopen:
+
+Command Prompt / PowerShell
+
+VS Code / Jupyter / Anaconda Prompt (if you're using them)
+-------------------------
+2. also TesseractNotFoundError: tesseract is not installed or
+   it's not in your PATH.
+
+❓"If pytesseract is installed, why do I still need Tesseract?"
+Because:
+
+🧠 pytesseract is just a Python wrapper — it calls the real
+ Tesseract executable under the hood.
+
+ 🔽 Download and Install (1 minute)
+Installer (64-bit):
+
+👉 Download tesseract-ocr-w64-setup-5.3.3.20231005.exe
+
+Install it with:
+
+✅ “Add Tesseract to system path for all users”
+
+✅ Keep default location: C:\Program Files\Tesseract-OCR
+--------------------------
+3. steps to run docker
+  3.1 docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+  3.2 >docker ps  -a
+  3.3 docker start ollama
+  3.4 docker exec -it ollama ollama run deepseek-r1:1.5b
+  3.5 docker exect -it ollama ollama list  
+  3.6 on http://localhost:11434/ u shud see "ollama is running"
+  3.7 
