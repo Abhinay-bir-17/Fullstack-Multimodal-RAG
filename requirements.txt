@@ -60,6 +60,8 @@ Install it with:
   3.2 >docker ps  -a
   3.3 docker start ollama
   3.4 docker exec -it ollama ollama run deepseek-r1:1.5b
-  3.5 docker exect -it ollama ollama list  
+  3.5 docker exec -it ollama ollama list  
   3.6 on http://localhost:11434/ u shud see "ollama is running"
-  3.7 
+  3.7 docker exec -it ollama ollama run "new model name here it will pull"
+4. for oepnsearch and oepnsearch-dashboard
+  docker compose  -f docker-compose.yml up
