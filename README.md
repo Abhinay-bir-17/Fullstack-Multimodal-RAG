@@ -18,38 +18,43 @@ A fullstack Retrieval-Augmented Generation (RAG) application that supports multi
 
 1. **Clone the repository**
 2. **Create a virtual environment:**
+    for windows users use the follwing commands to activate and make a virtual environment:
+       python -m venv .venv
+       .venv\Scripts\Activate   
    ```bash
    python -m venv .venv
    source .venv/bin/activate
    ```
-3. **Install dependencies**
+
+   note : windows user will need to install poppler and tesseract libraries, i have listed the commands in the requirements.txt file
+4. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
-4. **Install and start Ollama as a Docker Container:**
+5. **Install and start Ollama as a Docker Container:**
    ```bash
    docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
    ```
-5. **Pull required models:**
+6. **Pull required models:**
    ```bash
    docker exec -it ollama ollama run deepseek-r1:1.5b          
    docker exec -it ollama ollama run nomic-embed-text # For embeddings
    ```
-6. **Start OpenSearch:**  
+7. **Start OpenSearch:**  
    ```bash
    docker compose -f docker-compose.yml
    ```
    Make sure your OpenSearch instance is running on `localhost:9200` (or update the connection settings in the code)
 
-7. **Create `.env` file & Save API KEY**
+8. **Create `.env` file & Save API KEY**
    ```bash
    GEMINI_API_KEY=
    ```
-8. **Ingest Chunks**
+9. **Ingest Chunks**
    ```bash
    python ingestion.py
    ```
-9. **Run the app**
+10. **Run the app**
    ```bash
    python app.py
    ```
