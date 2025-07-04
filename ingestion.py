@@ -1,7 +1,7 @@
 def create_index_if_not_exists(client, index_name):
     """
     Create an OpenSearch index with proper mapping for vector search if it doesn't exist.
-
+    
     Args:
         client: OpenSearch client instance
         index_name: Name of the index to create

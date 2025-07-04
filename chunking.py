@@ -1,15 +1,15 @@
 def process_images_with_captions(raw_chunks, use_gemini=True):
-    """
+    """      
     Extract images from raw document chunks, identify captions, and generate descriptions.
-
-    Args:
+             
+    Args:    
         raw_chunks: List of document elements from unstructured.partition_pdf
         use_gemini: Whether to use Gemini for image captioning (default: True)
-
-    Returns:
+             
+    Returns: 
         List of dictionaries with image data, captions, and generated descriptions
         encountered_errors: List of dictionaries containing any errors encountered during processing
-    """
+    """      
     import base64
     import os
 
