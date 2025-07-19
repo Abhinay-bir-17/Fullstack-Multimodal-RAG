@@ -126,5 +126,5 @@ if __name__ == "__main__":
     # results = semantic_search(query, top_k=10)
     # results = hybrid_search(query, top_k=10)
     for i in results:
-        print(i['_source']['content'])  # ✅ Correct
+        print(i['_source']['content'])
         print("--------------------------------------")

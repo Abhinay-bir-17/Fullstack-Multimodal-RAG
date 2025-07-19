@@ -1,5 +1,5 @@
 version: '3.8'
-services:
+services: 
   opensearch:
     image: opensearchproject/opensearch:2.11.0
     container_name: opensearch
@@ -25,6 +25,6 @@ services:
       - opensearch
     restart: unless-stopped
 
-volumes:
+volumes:    
   opensearch-data:
     driver: local
